@@ -32,7 +32,7 @@ const DrawerLayout = ({ children }) => {
                             <ul className="menu menu-horizontal">
                                 {/* <!-- Navbar menu content here --> */}
                                 <li><Link to='/'>Homepage</Link></li>
-                                <li><Link to='/about'>Portfolio</Link></li>
+                                <li><Link to='/profile'>Portfolio</Link></li>
                                 <li><Link to='/about'>About</Link></li>
                             </ul>
                         </div>
