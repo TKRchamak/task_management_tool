@@ -1,0 +1,11 @@
+quick start url --> https://www.django-rest-framework.org/tutorial/quickstart/
+
+1. create environment for django application    -> python3 -m venv env
+2. activate the environment                     -> source env/bin/activate
+3. install django in environment                -> pip install django
+4. install djangorestframework in environment   -> pip install djangorestframework
+5. create a project in this environment         -> django-admin startproject project_name
+5. create a app in this environment             -> django-admin startapp app_name
+6. for create super user in environment         -> python manage.py createsuperuser
+7. run migration for this project               -> python manage.py migrate
+8. for run the project                          -> python manage.py runserver
