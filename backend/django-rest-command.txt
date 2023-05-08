@@ -9,3 +9,13 @@ quick start url --> https://www.django-rest-framework.org/tutorial/quickstart/
 6. for create super user in environment         -> python manage.py createsuperuser
 7. run migration for this project               -> python manage.py migrate
 8. for run the project                          -> python manage.py runserver
+
+
+
+
+views ---> business logic 
+
+serializers ---> validation translation
+
+
+

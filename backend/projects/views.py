@@ -8,13 +8,17 @@ from rest_framework.views import APIView
 
 
 class ProjectDetailView(APIView):
+    def get(self, request):
+        projectList = [
+            {
+                'id': 0,
+                'name': 'test project',
+            }
+        ]
+        return Response(projectList)
+
     def post(self, requrest):
         context = {
             'val2': 2
         }
-
         return Response(context)
-
-    def get(self, request):
-
-        return Response
