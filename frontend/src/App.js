@@ -4,6 +4,7 @@ import './App.css';
 import DrawerLayout from './Layouts/DrawerLayout/DrawerLayout';
 import { themeMode } from './Redux/themeSlice';
 import Home from './Pages/Home/Home';
+import Login from './Pages/Login/Login';
 
 function App() {
   const theme = useSelector(themeMode);
@@ -11,6 +12,10 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
+      element: <Login />,
+    },
+    {
+      path: "/home",
       element: <DrawerLayout> <Home /> </DrawerLayout>,
     },
     {

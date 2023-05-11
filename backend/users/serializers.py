@@ -1,8 +1,10 @@
 from rest_framework import serializers
 from .models import User
 
+
 class UserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, required=True)
+
     class Meta:
         model = User
         fields = [
@@ -16,7 +18,7 @@ class UserSerializer(serializers.ModelSerializer):
     def validate(self, data):
         print("data on serializer: ", data)
         return data
-    
+
     def create(self, data):
         user_data = User.objects.create(
             username=data['username'],
