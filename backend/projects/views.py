@@ -3,22 +3,16 @@ from .models import ProjectDetails
 from .serializers import ProjectDetailsSerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework import generics
 
 # Create your views here.
 
 
-class ProjectDetailView(APIView):
-    def get(self, request):
-        projectList = [
-            {
-                'id': 0,
-                'name': 'test project',
-            }
-        ]
-        return Response(projectList)
+class ProjectDetailListCreate(generics.ListCreateAPIView):
+    ''' create single detail and get list of details'''
+    serializer_class = ProjectDetailsSerializer
+    queryset = ProjectDetails.objects.all()
 
-    def post(self, requrest):
-        context = {
-            'val2': 2
-        }
-        return Response(context)
+class ProjectDetailOperation(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = ProjectDetailsSerializer
+    queryset = ProjectDetails.objects.all()
